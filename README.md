@@ -33,5 +33,25 @@ Lot 1,2,3
 
 ![lot 1,2,3](https://user-images.githubusercontent.com/100324759/174414761-39490b39-5007-453a-b6fe-51e73e7c430e.PNG)
 
-In the first table, the variance is 62 which fits the 100 limit criteria. Interestingly, if we take a look at the summary of the 3 lots individually, we can see that Lot 3 has a very high variance of 170, potentially skewing the data and does not fit within the allowed standards.
+In the first table, the variance is 62 which fits the 100 limit criteria. Interestingly, if we take a look at the summary of the 3 lots individually, we can see that Lot 3 has a very high variance of 170, potentially skewing the data and does not fit within the allowed standards of 100 PSI variance.
+
+## T-Tests on Suspension Coils
+
+In order to determine if the average PSI of our dataset is different from the population average of 1500, a T-test was performed to achieve the following results.
+
+![T-TEST](https://user-images.githubusercontent.com/100324759/174439926-9d309f68-226e-4b76-9380-33b93c8911c1.PNG)
+
+We can see that for our p-value we have a value that is greater than 0.05, indicating that our null hypothesis can not be rejected meaning our data's mean is not 1500. Taking this analysis further, a t-test was then performed on each individual lot.
+
+![lot ttest](https://user-images.githubusercontent.com/100324759/174439993-a1e1688c-4d94-41f4-a513-72891f4923fd.PNG)
+
+While 2 lots had very had p-values of 1 and 0.6 for 1 and 2 respectively, lot 3 has a smaller p value of 0.04, thus for lot 3 specifically, the null hypothesis can be rejected and has a PSI of 1500. 
+
+## Study Design: MechaCar vs Competition
+
+To push MechaCar into the competitive market, several more factors should be addressed. When we take a look at the perspective of the consumer a cost-benefit analysis is important as not all users will be able to afford an expensive car even if the features are amazing. We can take other factors and compare them to other cars in the market such as horse power, CO2 emissions/economical aspects, size, and when these are all measured and analyzed, we can then use the cost of the car to find a dollar cost average of certain features. This allows consumers to see how much they pay per "total benefits" of the car. With this in mind, if MechaCar is truly competitive, we can hypothesize that it has a much LOWER cost/benefit ratio. 
+
+To measure the values we can do the folloiwng: Horse power (raw measurement comparison), CO2 -> emission/mile travelled/usage time, CO2 emission -> gas usage, then create an arbitrary ratio with cost of the car and then perform t-tests much like above on the calculated measurements to determine any statistical significance.
+
+Overall, the study still requires alot more calculations to determine how competitive MechaCar is in the modern market but given time, the car can be fine tuned for better consumer use.
 
